@@ -3,8 +3,8 @@
 __Trying out Drie, a react-three-fiber-like Three.js component library for Vue.js.__
 
 -&nbsp; __Version:__ 0.0.1  
--&nbsp; __Repo:__ <https://github.com/richplastow/tryout-vue-threejs-drie>  
--&nbsp; __Homepage:__ <https://richplastow.com/tryout-vue-threejs-drie>
+-&nbsp; __Repo:__ <https://github.com/richplastow/tryout-vue3-threejs-drie>  
+-&nbsp; __Homepage:__ <https://richplastow.com/tryout-vue3-threejs-drie>
 
 ## Recommended IDE Setup
 
@@ -77,7 +77,7 @@ npm run lint
 ## How to create a project like this
 
 1. Create the GitHub repo, and in Settings -> Pages -> Branch choose 'main' and
-   keep '/ (root)'
+   '/docs'
 2. `git clone git@github.com:<GITHUB_USERNAME>/tryout-vue3-threejs-drie.git`
 3. `cd tryout-vue3-threejs-drie`
 4. Follow the ['Creating a Vue Application' Quick Start:
@@ -101,12 +101,17 @@ npm run lint
    ✔ Add ESLint for code quality? … Yes
    ✔ Add Prettier for code formatting? … Yes
    
-   Scaffolding project in /Users/ ... /tryout-vue-threejs-drie...
+   Scaffolding project in /Users/ ... /tryout-vue3-threejs-drie...
    ```
 5. Move everything apart from the README.md out of the newly created folder
    into the top level of the repo, and delete that folder
 6. In package.json, correct the version and private values, and add
    repository, keywords, author, license, bugs and homepage
+7. `npm install` installs 468 packages with 0 vulnerabilities:  
+   199.7 MB for 13,826 items
+8. `npm run format && npm run dev` and open <http://127.0.0.1:5173/>
+9. `npm run build && mv dist docs && static-server docs` and open
+    <http://127.0.0.1:9080/index.html>
 
 <!-- 7. Follow the [Drie Getting Started Guide
    ](https://www.drie.dev/guide/getting-started) to install
@@ -121,7 +126,7 @@ npm run lint
    
    Vue.js - The Progressive JavaScript Framework
    
-   ✔ Project name: … tryout-vue-threejs-drie
+   ✔ Project name: … tryout-vue3-threejs-drie
    ✔ Add TypeScript? … Yes
    ✔ Add JSX Support? … Yes
    ✔ Add Vue Router for Single Page Application development? … Yes
@@ -131,7 +136,7 @@ npm run lint
    ✔ Add ESLint for code quality? … Yes
    ✔ Add Prettier for code formatting? … Yes
    
-   Scaffolding project in /Users/ ... /tryout-vue-threejs-drie...
+   Scaffolding project in /Users/ ... /tryout-vue3-threejs-drie...
    ```
 4. 
 
