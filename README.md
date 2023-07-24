@@ -109,35 +109,24 @@ npm run lint
    repository, keywords, author, license, bugs and homepage
 7. `npm install` installs 468 packages with 0 vulnerabilities:  
    199.7 MB for 13,826 items
-8. `npm run format && npm run dev` and open <http://127.0.0.1:5173/>
-9. `npm run build && mv dist docs && static-server docs` and open
-    <http://127.0.0.1:9080/index.html>
+8. Add `base: '/tryout-vue3-threejs-drie/',` to vite.config.ts
+8. `npm run format && npm run dev`  
+   and open <http://127.0.0.1:5173/tryout-vue3-threejs-drie/>
+10. Assuming you have the NPM module `static-server` installed globally,  
+    `npm run build && mv dist tryout-vue3-threejs-drie && static-server`  
+    and open <http://127.0.0.1:9080/tryout-vue3-threejs-drie/>
+11. `mv tryout-vue3-threejs-drie docs` - ready for GitHub Pages
+12. Follow the [Drie Getting Started Guide
+   ](https://www.drie.dev/guide/getting-started) to install dependencies
+   @janvorisek/drie, three and dev-dependency @types/three:  
+   10 packages with 0 vulnerabilities, 46.9 MB for 1,997 items
+13. Use the [Drie plugin
+    ](https://www.drie.dev/guide/getting-started#vue-3-plugin) by just adding  
+    `import drie from '@janvorisek/drie'` and  
+    `app.use(drie)` to src/main.ts
+14. Replace src/views/HomeView.vue with the [Drie 'Basic setup' example
+    ](https://www.drie.dev/examples/basic-setup#code)  
+    (the `import`s are not needed, because of `app.use(drie)` in src/main.ts)
+15. You should see the blue box, and be able to rotate it by dragging
 
-<!-- 7. Follow the [Drie Getting Started Guide
-   ](https://www.drie.dev/guide/getting-started) to install
-   @janvorisek/drie, three and @types/three:  
-   10 packages with 0 vulnerabilities, 46.8 MB for 1,999 items
-3. Follow the ['Creating a Vue Application' Quick Start:
-   ](https://vuejs.org/guide/quick-start.html#creating-a-vue-application)
-   ```
-   Need to install the following packages:
-     create-vue@3.7.1
-   Ok to proceed? (y) 
-   
-   Vue.js - The Progressive JavaScript Framework
-   
-   ✔ Project name: … tryout-vue3-threejs-drie
-   ✔ Add TypeScript? … Yes
-   ✔ Add JSX Support? … Yes
-   ✔ Add Vue Router for Single Page Application development? … Yes
-   ✔ Add Pinia for state management? … No
-   ✔ Add Vitest for Unit Testing? … Yes
-   ✔ Add an End-to-End Testing Solution? › Playwright
-   ✔ Add ESLint for code quality? … Yes
-   ✔ Add Prettier for code formatting? … Yes
-   
-   Scaffolding project in /Users/ ... /tryout-vue3-threejs-drie...
-   ```
-4. 
-
- -->
+<!-- 200,173,295 bytes (46.9 MB on disk) for 15,836 items -->
