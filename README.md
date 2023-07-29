@@ -104,29 +104,32 @@ npm run lint
    Scaffolding project in /Users/ ... /tryout-vue3-threejs-drie...
    ```
 5. Move everything apart from the README.md out of the newly created folder
-   into the top level of the repo, and delete that folder
-6. In package.json, correct the version and private values, and add
+   into the top level of the repo, and delete that folder (note that there are
+   invisible items, whose filenames start with a '.')
+6. In package.json, correct the version and private values, and add description,
    repository, keywords, author, license, bugs and homepage
-7. `npm install` installs 468 packages with 0 vulnerabilities:  
+7. Also in package.json, append ` --ignore-pattern /docs/` to the `lint` script
+8. `npm install` installs 468 packages with 0 vulnerabilities:  
    199.7 MB for 13,826 items
-8. Add `base: '/tryout-vue3-threejs-drie/',` to vite.config.ts
-8. `npm run format && npm run dev`  
-   and open <http://127.0.0.1:5173/tryout-vue3-threejs-drie/>
-10. Assuming you have the NPM module `static-server` installed globally,  
+9. Add `base: '/tryout-vue3-threejs-drie/',` to vite.config.ts
+10. `npm run format && npm run dev`  
+    and open <http://127.0.0.1:5173/tryout-vue3-threejs-drie/>
+11. Assuming you have the NPM module `static-server` installed globally,  
     `npm run build && mv dist tryout-vue3-threejs-drie && static-server`  
     and open <http://127.0.0.1:9080/tryout-vue3-threejs-drie/>
-11. `mv tryout-vue3-threejs-drie docs` - ready for GitHub Pages
-12. Follow the [Drie Getting Started Guide
+12. `mv tryout-vue3-threejs-drie docs` - ready for GitHub Pages
+13. Follow the [Drie Getting Started Guide
    ](https://www.drie.dev/guide/getting-started) to install dependencies
    @janvorisek/drie, three and dev-dependency @types/three:  
    10 packages with 0 vulnerabilities, 46.9 MB for 1,997 items
-13. Use the [Drie plugin
+14. Use the [Drie plugin
     ](https://www.drie.dev/guide/getting-started#vue-3-plugin) by just adding  
     `import drie from '@janvorisek/drie'` and  
     `app.use(drie)` to src/main.ts
-14. Replace src/views/HomeView.vue with the [Drie 'Basic setup' example
+15. Replace src/views/HomeView.vue with the [Drie 'Basic setup' example
     ](https://www.drie.dev/examples/basic-setup#code)  
     (the `import`s are not needed, because of `app.use(drie)` in src/main.ts)
-15. You should see the blue box, and be able to rotate it by dragging
+16. You should see the blue box, and be able to rotate it by dragging
 
 <!-- 200,173,295 bytes (46.9 MB on disk) for 15,836 items -->
+<!-- 203,696,927 bytes (252.4 MB on disk) for 15,823 items -->
