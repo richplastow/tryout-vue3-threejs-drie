@@ -37,10 +37,10 @@ npm install
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Type-Check, Compile, Minify and Serve Locally for Production
 
 ```sh
-npm run build
+npm run start
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)

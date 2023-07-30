@@ -13,11 +13,14 @@ const router = useRouter()
       <HelloWorld msg="You did it!" />
       fullPath: {{ router.currentRoute.value.fullPath }}<br>
       path: {{ router.currentRoute.value.path }}<br>
+      name: {{ router.currentRoute.value.name }}<br>
+      params.foo: {{ router.currentRoute.value.params.foo }}<br>
       matched[0]?.name: {{ router.currentRoute.value.matched[0]?.name || '(no match)' }}<br>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about/">About</RouterLink>
+        <RouterLink to="/no/such/route">No Such Route</RouterLink>
       </nav>
     </div>
   </header>

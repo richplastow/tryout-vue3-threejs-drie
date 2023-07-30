@@ -1,31 +1,3 @@
-<script setup lang="ts">
-import { useRouter } from 'vue-router'
-
-const props = defineProps<{
-  fullPath: string
-}>()
-const { fullPath } = props
-
-// const route = useRouter()
-// if (fullPath.length > 2 && fullPath.startsWith('/?')) {
-//   // Normalise redirects from 404.html, where a double slash can appear.
-//   const p = fullPath.slice(0, 4) === '/?//' ? `/?/${fullPath.slice(4)}` : fullPath
-//   // Tidy up the URL when the query is essentially empty.
-//   if (p === '/?' || p === '/?/' || p === '/?//') {
-//     route.replace({ path: '/', query: {} })
-//   } else if (p === '/?/about') {
-//     route.replace({ path: '/about/' })
-//   } else if (p.startsWith('/?/about/?')) {
-//     route.replace({ path: '/about/', query: { [p.slice(10)]: null } })
-//   } else if (p.startsWith('/?/about/')) {
-//     route.replace({ path: '/about/', query: { [p.slice(9)]: null } })
-//   } else {
-//     console.log('Not Found!')    
-//   }
-// }
-
-</script>
-
 <template>
   <!--
     Parent element's width and height are automatically propagated to the renderer.
@@ -34,9 +6,6 @@ const { fullPath } = props
     The following example makes the renderer full screen (and responsive).
   -->
   <div style="width: 100vh; height: 100vh;">
-    <aside>
-      {{ fullPath }}
-    </aside>
     <!-- Renderer is a mandatory component wrapping up all the rendering -->
     <Renderer :autoResize="true">
       <!--
@@ -60,12 +29,3 @@ const { fullPath } = props
     </Renderer>
   </div>
 </template>
-
-<style scoped>
-aside {
-  position: fixed;
-  top: 5rem;
-  left: 5rem;
-  z-index: 10;
-}
-</style>
