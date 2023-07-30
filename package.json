@@ -8,7 +8,7 @@
     "build": "run-p type-check build-only",
     "poststart": "mv tryout-vue3-threejs-drie docs",
     "preview": "vite preview",
-    "start": "rm -rf dist && rm -rf docs && rm -rf tryout-vue3-threejs-drie && npm run build && mv dist/index.html dist/404.html && mv dist tryout-vue3-threejs-drie && static-server -p 5173 -n 404.html",
+    "start": "rm -rf docs && rm -rf tryout-vue3-threejs-drie && npm run build && mv docs/index.html docs/404.html && mv docs tryout-vue3-threejs-drie && static-server -p 5173 -n tryout-vue3-threejs-drie/404.html",
     "test:unit": "vitest",
     "test:e2e": "playwright test",
     "build-only": "vite build",

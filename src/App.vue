@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRouter } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+
+const router = useRouter()
 </script>
 
 <template>
@@ -9,6 +11,9 @@ import HelloWorld from './components/HelloWorld.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      fullPath: {{ router.currentRoute.value.fullPath }}<br>
+      path: {{ router.currentRoute.value.path }}<br>
+      matched[0]?.name: {{ router.currentRoute.value.matched[0]?.name || '(no match)' }}<br>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
