@@ -6,23 +6,23 @@ const props = defineProps<{
 }>()
 const { fullPath } = props
 
-const route = useRouter()
-if (fullPath.length > 2 && fullPath.startsWith('/?')) {
-  // Normalise redirects from 404.html, where a double slash can appear.
-  const p = fullPath.slice(0, 4) === '/?//' ? `/?/${fullPath.slice(4)}` : fullPath
-  // Tidy up the URL when the query is essentially empty.
-  if (p === '/?' || p === '/?/' || p === '/?//') {
-    route.replace({ path: '/', query: {} })
-  } else if (p === '/?/about') {
-    route.replace({ path: '/about/' })
-  } else if (p.startsWith('/?/about/?')) {
-    route.replace({ path: '/about/', query: { [p.slice(10)]: null } })
-  } else if (p.startsWith('/?/about/')) {
-    route.replace({ path: '/about/', query: { [p.slice(9)]: null } })
-  } else {
-    console.log('Not Found!')    
-  }
-}
+// const route = useRouter()
+// if (fullPath.length > 2 && fullPath.startsWith('/?')) {
+//   // Normalise redirects from 404.html, where a double slash can appear.
+//   const p = fullPath.slice(0, 4) === '/?//' ? `/?/${fullPath.slice(4)}` : fullPath
+//   // Tidy up the URL when the query is essentially empty.
+//   if (p === '/?' || p === '/?/' || p === '/?//') {
+//     route.replace({ path: '/', query: {} })
+//   } else if (p === '/?/about') {
+//     route.replace({ path: '/about/' })
+//   } else if (p.startsWith('/?/about/?')) {
+//     route.replace({ path: '/about/', query: { [p.slice(10)]: null } })
+//   } else if (p.startsWith('/?/about/')) {
+//     route.replace({ path: '/about/', query: { [p.slice(9)]: null } })
+//   } else {
+//     console.log('Not Found!')    
+//   }
+// }
 
 </script>
 
