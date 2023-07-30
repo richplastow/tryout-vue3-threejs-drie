@@ -5,11 +5,16 @@
     <link rel="icon" href="/tryout-vue3-threejs-drie/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
-    <script type="module" crossorigin src="/tryout-vue3-threejs-drie/assets/index-7d08625f.js"></script>
-    <link rel="stylesheet" href="/tryout-vue3-threejs-drie/assets/index-cc35879a.css">
   </head>
   <body>
-    <div id="app"></div>
-    
+    <script>!function(base){ // IIFE which redirects deep links to index.html
+      sessionStorage.setItem(
+        '404_REFERRER',
+        '/' + // don't use a 'template literal' - the browser may predate ES6
+          location.href.split(base)
+            .slice(1)
+            .join(base)) // just in case the route also contains `base`
+      location.href = base
+    }('/tryout-vue3-threejs-drie/')</script>
   </body>
 </html>

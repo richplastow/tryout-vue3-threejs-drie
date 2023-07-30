@@ -13,6 +13,8 @@ const router = useRouter()
       <HelloWorld msg="You did it!" />
       fullPath: {{ router.currentRoute.value.fullPath }}<br>
       path: {{ router.currentRoute.value.path }}<br>
+      query: {{ router.currentRoute.value.query }}<br>
+      hash: {{ router.currentRoute.value.hash }}<br>
       name: {{ router.currentRoute.value.name }}<br>
       params.foo: {{ router.currentRoute.value.params.foo }}<br>
       matched[0]?.name: {{ router.currentRoute.value.matched[0]?.name || '(no match)' }}<br>
